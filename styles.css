@@ -1,0 +1,106 @@
+:root {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    --box-shadow: 0 15px 31px 0 rgba(78, 78, 78, 0.507);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #999;
+    height: 10rem;
+    padding: 0px 50px 0px 50px;
+}
+
+.header > h1 {
+    display: inline;
+    margin-right: auto;
+}
+
+.header #add-btn {
+    color: grey;
+    font-size: 4rem;
+    font-weight: 900;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.header #add-btn:hover {
+    width: 105px;
+    height: 55px;
+}
+
+.main-content {
+    display: grid;
+    grid: repeat(auto-fill, 20rem) / repeat(auto-fill, 30rem);
+    gap: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content: center;
+    background-color: white;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.main-content .book {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.75rem;
+    border: solid black 2px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.main-content .book:hover {
+    bottom: 2px;
+    right: 2px;
+}
+
+.book .complete {
+    color: green;
+}
+
+.book .in-progress {
+    color: red;
+}
+
+.cancel-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 200px;
+}
+
+.cancel-btn:hover {
+    background-color: grey;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #999;
+    height: 10rem;
+    padding: 10px;
+    gap: 30px;
+}
+
+
+
+.footer a svg path:hover {
+    fill: white;
+}
+
